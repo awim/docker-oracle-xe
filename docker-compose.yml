@@ -1,0 +1,14 @@
+version: '2'
+services:
+  database:
+    image: oracle-xe:18c
+    container_name: oracle18c
+    restart: always
+    environment:
+     - ORACLE_PASSWORD=awim
+     - EM_GLOBAL_ACCESS_YN=Y
+    ports:
+     - "1521:1521"
+     - "5500:5500"
+    volumes:
+     - /oracle-data/oradata:/opt/oracle/oradata

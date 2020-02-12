@@ -160,6 +160,9 @@ fi;
 #   echo "#####################################"
 # fi;
 
+${ORACLE_BASE}/scripts/setupOracle.sh
+
+
 # Tail on alert log and wait (otherwise container will exit)
 echo "The following output is now a tail of the alert.log:"
 tail -f ${ORACLE_BASE}/diag/rdbms/*/*/trace/alert*.log &
