@@ -26,7 +26,7 @@ RUN yum install -y oracle-database-preinstall-18c && \
   yum install -y /tmp/${ORACLE_XE_RPM} && \
   rm -rf /tmp/${ORACLE_XE_RPM}
 
-COPY ./scripts/*.sh ${ORACLE_BASE}/scripts/
+COPY ./scripts/* ${ORACLE_BASE}/scripts/
 
 RUN chmod a+x ${ORACLE_BASE}/scripts/*.sh
 
