@@ -7,8 +7,8 @@ EXIT
 EOF
 
 echo "alter ora file"
-cat ${ORACLE_HOME}/scripts/sqlnet.ora > ${ORACLE_HOME}/network/admin/sqlnet.ora
-cat ${ORACLE_HOME}/scripts/tnsnames.ora > ${ORACLE_HOME}/network/admin/tnsnames.ora
+cat ${ORACLE_BASE}/scripts/sqlnet.ora > ${ORACLE_HOME}/network/admin/sqlnet.ora
+cat ${ORACLE_BASE}/scripts/tnsnames.ora > ${ORACLE_HOME}/network/admin/tnsnames.ora
 
 echo "alter common_user_prefix as null"
 sqlplus sys/oracle@localhost as sysdba <<EOF
@@ -22,5 +22,3 @@ EOF
 # adrci exec="set home diag/rdbms/xe/XE; set control \(SHORTP_POLICY = 0\)"
 # adrci exec="set home diag/rdbms/xe/XE; set control \(LONGP_POLICY = 0\)"
 
-echo "Restart Oracle Service"
-/etc/init.d/oracle-xe-18c restart
