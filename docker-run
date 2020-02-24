@@ -1,0 +1,1 @@
+docker run -d --name oracle -e ORACLE_PASSWORD:oracle -p 1521:1521 -p 5500:5500 -v /oracle-data/dumps:/dumps -v /oracle-data/oradata:/opt/oracle/oradata oracle-xe:18c

@@ -30,8 +30,6 @@ COPY ./scripts/*.sh ${ORACLE_BASE}/scripts/
 
 RUN chmod a+x ${ORACLE_BASE}/scripts/*.sh
 
-COPY ./scripts/crontab /etc/crontab
-
 # 1521: Oracle listener
 # 5500: Oracle Enterprise Manager (EM) Express listener.
 EXPOSE 1521 5500
